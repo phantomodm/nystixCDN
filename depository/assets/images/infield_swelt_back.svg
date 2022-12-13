@@ -269,7 +269,7 @@
 </g>
 <g id="inf_x5F_open_x5F_back">
 	<g>
-		<image id="glove-view-1" overflow="visible" enable-background="new" width="794" height="943" xlink:href="/assets/images/9P_infield_swelt_back_view.png"  transform="matrix(0.3712 0 0 0.3712 40.1511 0)">
+		<image id="glove-view-1" overflow="visible" enable-background="new" width="794" height="943" xlink:href="https://cdn.jsdelivr.net/gh/phantomodm/nystixCDN@9P/depository/assets/images/9P_infield_swelt_back_view.png"  transform="matrix(0.3712 0 0 0.3712 40.1511 0)">
 	</image>
 	</g>
 </g>
@@ -304,12 +304,12 @@
 </g>
 <g id="inf_x5F_logo_x5F_elite">
 
-		<image style="overflow:visible;enable-background:new    ;" width="2070" height="633" xlink:href="./assets/images/elite.png"  transform="matrix(-9.396980e-03 5.337772e-02 -5.325266e-02 -9.374964e-03 179.9596 34.92)">
+		<image style="overflow:visible;enable-background:new    ;" width="2070" height="633" xlink:href="https://cdn.jsdelivr.net/gh/phantomodm/nystixCDN@9P/depository/assets/images/elite.png"  transform="matrix(-9.396980e-03 5.337772e-02 -5.325266e-02 -9.374964e-03 179.9596 34.92)">
 	</image>
 </g>
 <g id="inf_x5F_logo_x5F_rise">
 
-		<image style="overflow:visible;enable-background:new    ;" width="2230" height="668" xlink:href="./assets/images/rise.png"  transform="matrix(-7.910918e-03 4.870050e-02 -4.568002e-02 -7.420271e-03 177.0667 35.9139)">
+		<image style="overflow:visible;enable-background:new    ;" width="2230" height="668" xlink:href="https://cdn.jsdelivr.net/gh/phantomodm/nystixCDN@9P/depository/assets/images/rise.png"  transform="matrix(-7.910918e-03 4.870050e-02 -4.568002e-02 -7.420271e-03 177.0667 35.9139)">
 	</image>
 </g>
 </svg>

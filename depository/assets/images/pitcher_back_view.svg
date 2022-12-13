@@ -172,7 +172,7 @@
 
 
 
-		<image id="glove-view-1" style="overflow:visible; enable-background:new;" width="720" height="950" xlink:href="./assets/images/9P_pitcher_back_view.png"  transform="matrix(0.3674 0 0 0.3674 55.2474 2.5)">
+		<image id="glove-view-1" style="overflow:visible; enable-background:new;" width="720" height="950" xlink:href="https://cdn.jsdelivr.net/gh/phantomodm/nystixCDN@9P/depository/assets/images/9P_pitcher_back_view.png"  transform="matrix(0.3674 0 0 0.3674 55.2474 2.5)">
 
 	</image>
 
@@ -207,12 +207,12 @@
 </g>
 <g id="pitcher_x5F_logo_x5F_elite">
 
-		<image style="overflow:visible;enable-background:new    ;" width="2070" height="633" xlink:href="/assets/images/elite.png"  transform="matrix(-6.547073e-03 5.380167e-02 -5.367562e-02 -6.531734e-03 169.4138 54.6325)">
+		<image style="overflow:visible;enable-background:new    ;" width="2070" height="633" xlink:href="https://cdn.jsdelivr.net/gh/phantomodm/nystixCDN@9P/depository/assets/images/elite.png"  transform="matrix(-6.547073e-03 5.380167e-02 -5.367562e-02 -6.531734e-03 169.4138 54.6325)">
 	</image>
 </g>
 <g id="pitcher_x5F_logo_x5F_rise">
 
-		<image style="overflow:visible;enable-background:new    ;" width="2230" height="668" xlink:href="/assets/images/rise.png"  transform="matrix(-5.311672e-03 4.905209e-02 -4.600981e-02 -4.982233e-03 166.5779 55.7788)">
+		<image style="overflow:visible;enable-background:new    ;" width="2230" height="668" xlink:href="https://cdn.jsdelivr.net/gh/phantomodm/nystixCDN@9P/depository/assets/images/rise.png"  transform="matrix(-5.311672e-03 4.905209e-02 -4.600981e-02 -4.982233e-03 166.5779 55.7788)">
 	</image>
 </g>
 
