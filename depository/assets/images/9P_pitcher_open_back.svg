@@ -168,8 +168,8 @@
 		C89.4,98,93.8,94.6,92.8,89z"/>
 </g>
 <g id="pitcher_x5F_open_x5F_back">
-	
-		<image id="glove-view-1" overflow="visible" width="720" height="950" xlink:href="assets/images/9P_pitcher_open_back1.png"  transform="matrix(0.3674 0 0 0.3674 55.2474 2.5)">
+
+		<image id="glove-view-1" overflow="visible" width="720" height="950" xlink:href="https://cdn.jsdelivr.net/gh/phantomodm/nystixCDN@9P/depository/assets/images/9P_pitcher_open_back1.png"  transform="matrix(0.3674 0 0 0.3674 55.2474 2.5)">
 	</image>
 </g>
 </svg>

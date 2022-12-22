@@ -58,9 +58,9 @@
 	<g>
 		<path fill="none"  stroke-miterlimit="10" stroke-dasharray="8,2" d="M177.9,4.3c0,0-1.7,8.8,20.8,39.9
 			s30.2,41.2,30.2,41.2L250,118h3.7v-5c0,0-44.1-59.8-50.7-68.7s-18.5-25.1-22.8-40.2L177.9,4.3L177.9,4.3z"/>
-		<polygon fill="none"  stroke-miterlimit="10" stroke-dasharray="8,2" points="140.6,33.1 162.5,70.4 185.6,115 
+		<polygon fill="none"  stroke-miterlimit="10" stroke-dasharray="8,2" points="140.6,33.1 162.5,70.4 185.6,115
 			188.8,111.3 162,64.7 143.8,31.9 		"/>
-		<polygon fill="none"  stroke-miterlimit="10" stroke-dasharray="8,2" points="107.3,49.3 126.9,89.7 149.1,134.7 
+		<polygon fill="none"  stroke-miterlimit="10" stroke-dasharray="8,2" points="107.3,49.3 126.9,89.7 149.1,134.7
 			151.7,133.3 109.5,47.3 		"/>
 		<path fill="none"  stroke-miterlimit="10" stroke-dasharray="8,2" d="M72.5,96.1c0,0-1.2,21.9,13.7,37.8
 			s21.1,22.6,21.1,22.6l2.3-2.1c0,0-35.2-31-34.8-47"/>
@@ -147,7 +147,7 @@
 	</g>
 </g>
 <g id="catcher-fastback_x5F_vw1_x5F_fastback_x5F_side">
-	
+
 		<image overflow="visible" enable-background="new" width="725" height="819" xlink:href="https://cdn.jsdelivr.net/gh/phantomodm/nystixCDN@9P/depository/assets/images/9P_catcher_fastback_side.png"  transform="matrix(0.4274 0 0 0.4274 0 0)">
 	</image>
 </g>
