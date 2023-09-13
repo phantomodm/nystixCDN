@@ -1,1 +1,404 @@
-import*as e from"three";import{OrbitControls as o}from"three/addons/controls/OrbitControls.js";import{GLTFLoader as a}from"three/addons/loaders/GLTFLoader.js";import{DRACOLoader as t}from"three/addons/loaders/DRACOLoader.js";const r={"apple-green":9684002,beige:16771194,black:1579284," blue":29377,brown:6703142,coffee:8537857,"forest-green":3100976,green:3100976,grey:8026989,"lemon-yellow":15593299,"lt-blue":8900331,"lt-tea":10180651,"lt-grey":10594179,navy:1315958,"neon-yellow":15593299,orange:14909700,pink:16716947,purple:4929865,red:11870744,"royal-blue":530284,teal:32896,toffee:8801316,white:16711422,wine:7483191,yellow:13866246,"vegas-gold":12956504,"yellow-gold":16768768,silver:12632256,none:"none"},n=new e.Scene,i=new e.PerspectiveCamera(75,window.innerWidth/window.innerHeight,.1,1e3),s=new e.WebGLRenderer({antialias:!0,alpha:!0});s.shadowMap.enabled=!0,s.shadowMap.type=e.PCFSoftShadowMap;const l=document.getElementById("myThreeJSScene");s.setSize(l.clientWidth,l.clientHeight),l.appendChild(s.domElement);const c=new e.PlaneGeometry(.5,.5),d=new e.MeshStandardMaterial({transparent:!0,opacity:.2,depthWrite:!1}),h=new e.Mesh(c,d);h.rotation.x=-Math.PI/2,h.position.y=-.25,h.receiveShadow=!0,n.add(h);const m=new e.HemisphereLight(16777215,16777215,2);m.color.setHSL(.6,1,.6),m.groundColor.setHSL(.095,1,.75),m.position.set(0,50,0),n.add(m);new e.HemisphereLightHelper(m,10);const g=new e.DirectionalLight(16777215,3);g.color.setHSL(.1,1,.95),g.position.set(1,1.75,-1),g.position.multiplyScalar(30),n.add(g),g.castShadow=!0,g.shadow.mapSize.width=2048,g.shadow.mapSize.height=2048;const w=50;g.shadow.camera.left=-w,g.shadow.camera.right=w,g.shadow.camera.top=w,g.shadow.camera.bottom=-w,g.shadow.camera.far=3500,g.shadow.bias=-1e-4;const b=new e.DirectionalLight(16777215,3);b.color.setHSL(.1,1,.95),b.position.set(-1,1.75,1),b.position.multiplyScalar(30),n.add(b),b.castShadow=!0,b.shadow.mapSize.width=2048,b.shadow.mapSize.height=2048;b.shadow.camera.left=-w,b.shadow.camera.right=w,b.shadow.camera.top=w,b.shadow.camera.bottom=-w,b.shadow.camera.far=3500,b.shadow.bias=-1e-4;const p=new e.DirectionalLight(16777215,1);p.color.setHSL(.1,1,.95),p.position.set(-1,-1.75,1),p.position.multiplyScalar(30),n.add(p),p.castShadow=!0,p.shadow.mapSize.width=2048,p.shadow.mapSize.height=2048;p.shadow.camera.left=-w,p.shadow.camera.right=w,p.shadow.camera.top=w,p.shadow.camera.bottom=-w,p.shadow.camera.far=3500,p.shadow.bias=-1e-4;const u=new e.LoadingManager;u.onStart=function(e,o,a){console.log("Started loading file: "+e+".\nLoaded "+o+" of "+a+" files.")},u.onLoad=function(){console.log("Loading complete!"),document.getElementById("Loader").style.display="none"},u.onProgress=function(e,o,a){console.log("Loading file: "+e+".\nLoaded "+o+" of "+a+" files.")},u.onError=function(e){console.log("There was an error loading "+e)};const f=new a(u),C=new t;let k;C.preload(),C.setDecoderPath("decoder/"),C.setDecoderConfig({type:"js"}),f.setDRACOLoader(C),f.load(customModel.file,(a=>{function t(e,o){n.traverse((a=>{a.isMesh&&a.material.name===e&&("9p_logo_outline"===a.material.name&&!1===a.visible&&("string"==typeof o&&"none"===o&&(a.visible=!1),a.visible=!0),a.material.color.set(Number(o.toString())),a.material.emissive.set(Number(o.toString())))}))}k=a.scene,k.scale.set(20,20,20),k.castShadow=!0,k.receiveShadow=!0;const c=(new e.Box3).setFromObject(k),d=c.getCenter(new e.Vector3);k.position.sub(d),k.traverse((e=>{if(e.isMesh)switch(e.material.name){case"n_logo_main":case"n_logo_outline":case"ny_logo_main":case"ny_logo_outline":case"9p_logo_outline":e.visible=!1;break;case"9p_logo_main":case"9p_rise":case"web_graphic":e.material.color.set(Number(13019181));break;default:e.material.color.set(Number(2105376))}})),n.add(k),function(){const e=l.clientWidth,o=l.clientHeight;i.aspect=e/o,i.updateProjectionMatrix(),s.setSize(e,o)}();const h=new e.Sphere;c.getBoundingSphere(h);const m=h.center,g=h.radius;i.position.set(0,0,.8+g),i.lookAt(m);const w=new o(i,s.domElement);w.enableZoom=!0,w.autoRotate=!1,w.minDistance=5,w.maxDistance=7,w.update(),document.addEventListener("click",(e=>{if(e.target.classList.contains("cgkit-swatch")){let o=e.target.parentElement.parentElement.parentElement.parentNode.previousElementSibling.textContent;o=o.split(":")[0].toLowerCase();const a=e.target.getAttribute("data-attribute-value");switch(o){case"Back Finger Color":t("back_finger",r[a]);break;case"Thumb Finger Color":t("thumb_finger",r[a]);break;case"Thumb Inner Color":t("thumb_inner",r[a]);break;case"Thumb Outer Color":case"Index Outer Color":t("index_outer",r[a]);break;case"Index Inner Color":case"Index Inner Color":t("index_inner",r[a]);break;case"Ring Inner Color":t("ring_inner",r[a]);break;case"Pinky Inner Color":t("pinky_inner",r[a]);break;case"Middle Inner Color":t("middle_inner",r[a]);break;case"Middle Outer Color":t("middle_outer",r[a]);break;case"Ring Outer Color":t("ring_outer",r[a]);break;case"Pinky Outer Color":t("pinky_outer",r[a]);break;case"Wrist Color":t("wrist",r[a]);break;case"Palm Color":t("palm",r[a]);break;case"Web Color":t("web",r[a]);break;case"Web Color":t("web_graphic",r[a]);break;case"Lining Color":case"Lining Color":t("lining",r[a]);break;case"Web Base Color":t("web_utoe",r[a]);break;case"Target Color":t("target",r[a]);break;case"Binding Color":["binding","binding2"].forEach((e=>{t(e,r[a])}));break;case"Welt Color":["welt","welt2"].forEach((e=>{t(e,r[a])}));break;case"Lace Color":["laces","web laces"].forEach((e=>{t(e,r[a])}));break;case"Stitching Color":["stitches","web_stitches"].forEach((e=>{t(e,r[a])}));break;case"Embroidery Color":t("embroidery",r[a]);break;case"Finger Protector Color":t("finger_protector",r[a]);break;case"Glove Logo Color":t("glove_logo",r[a])}}}))}),(e=>{console.log(e.loaded/e.total*100+"% loaded")}));const S=()=>{requestAnimationFrame(S),k&&(k.rotation.y+=.005),s.render(n,i)};S(),window.addEventListener("resize",(()=>{const e=l.clientWidth,o=l.clientHeight;i.aspect=e/o,i.updateProjectionMatrix(),s.setSize(e,o)}));
+import * as THREE from "three";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+
+const colors = {
+  "apple-green": 0x93c422,
+  beige: 0xffe87a,
+  black: 0x181914,
+  " blue": 0x0072c1,
+  brown: 0x664826,
+  coffee: 0x824701,
+  "forest-green": 0x2f5130,
+  green: 0x2f5130,
+  grey: 0x7a7b6d,
+  "lemon-yellow": 0xedef53,
+  "lt-blue": 0x87ceeb,
+  "lt-tea": 0x9b582b,
+  "lt-grey": 0xa1a783,
+  navy: 0x141476,
+  "neon-yellow": 0xedef53,
+  orange: 0xe38104,
+  pink: 0xff1493,
+  purple: 0x4b3949,
+  red: 0xb52218,
+  "royal-blue": 0x08176c,
+  teal: 0x008080,
+  toffee: 0x864c24,
+  white: 0xfefefe,
+  wine: 0x722f37,
+  yellow: 0xd39506,
+  "vegas-gold": 0xc5b358,
+  "yellow-gold": 0xffdf00,
+  silver: 0xc0c0c0,
+  none: "none",
+};
+// Create scene
+const scene = new THREE.Scene();
+
+// Create camera
+const camera = new THREE.PerspectiveCamera(
+  75,
+  window.innerWidth / window.innerHeight,
+  0.1,
+  1000
+);
+
+// Create renderer
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+const container = document.getElementById("myThreeJSScene");
+renderer.setSize(container.clientWidth, container.clientHeight);
+container.appendChild(renderer.domElement);
+
+// Create ground plane
+const groundSize = 0.5;
+const groundGeometry = new THREE.PlaneGeometry(groundSize, groundSize); // Adjust the size as needed
+const groundMaterial = new THREE.MeshStandardMaterial({
+  transparent: true,
+  opacity: 0.2,
+  depthWrite: false,
+});
+const ground = new THREE.Mesh(groundGeometry, groundMaterial);
+
+// Rotate the ground to be horizontal
+ground.rotation.x = -Math.PI / 2;
+
+// Position the ground so it's under your model
+ground.position.y = -0.25; // Just slightly below the origin to avoid z-fighting with the model
+
+// Enable shadows for the ground
+ground.receiveShadow = true;
+
+// Add the ground to the scene
+scene.add(ground);
+
+// Add lighting
+const hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 2);
+hemiLight.color.setHSL(0.6, 1, 0.6);
+hemiLight.groundColor.setHSL(0.095, 1, 0.75);
+hemiLight.position.set(0, 50, 0);
+scene.add(hemiLight);
+
+const hemiLightHelper = new THREE.HemisphereLightHelper(hemiLight, 10);
+//scene.add(hemiLightHelper);
+
+/**Directional lights 1 */
+const dirLight = new THREE.DirectionalLight(0xffffff, 3);
+dirLight.color.setHSL(0.1, 1, 0.95);
+dirLight.position.set(1, 1.75, -1);
+dirLight.position.multiplyScalar(30);
+scene.add(dirLight);
+
+dirLight.castShadow = true;
+
+dirLight.shadow.mapSize.width = 2048;
+dirLight.shadow.mapSize.height = 2048;
+
+const d = 50;
+
+dirLight.shadow.camera.left = -d;
+dirLight.shadow.camera.right = d;
+dirLight.shadow.camera.top = d;
+dirLight.shadow.camera.bottom = -d;
+
+dirLight.shadow.camera.far = 3500;
+dirLight.shadow.bias = -0.0001;
+
+/**Directional lights 2 */
+const dirLight2 = new THREE.DirectionalLight(0xffffff, 3);
+dirLight2.color.setHSL(0.1, 1, 0.95);
+dirLight2.position.set(-1, 1.75, 1);
+dirLight2.position.multiplyScalar(30);
+scene.add(dirLight2);
+
+dirLight2.castShadow = true;
+
+dirLight2.shadow.mapSize.width = 2048;
+dirLight2.shadow.mapSize.height = 2048;
+
+const d2 = 50;
+
+dirLight2.shadow.camera.left = -d;
+dirLight2.shadow.camera.right = d;
+dirLight2.shadow.camera.top = d;
+dirLight2.shadow.camera.bottom = -d;
+
+dirLight2.shadow.camera.far = 3500;
+dirLight2.shadow.bias = -0.0001;
+
+/**Directional lights 3 */
+const dirLight3 = new THREE.DirectionalLight(0xffffff, 1);
+dirLight3.color.setHSL(0.1, 1, 0.95);
+dirLight3.position.set(-1, -1.75, 1);
+dirLight3.position.multiplyScalar(30);
+scene.add(dirLight3);
+
+dirLight3.castShadow = true;
+
+dirLight3.shadow.mapSize.width = 2048;
+dirLight3.shadow.mapSize.height = 2048;
+
+const d3 = 50;
+
+dirLight3.shadow.camera.left = -d;
+dirLight3.shadow.camera.right = d;
+dirLight3.shadow.camera.top = d;
+dirLight3.shadow.camera.bottom = -d;
+
+dirLight3.shadow.camera.far = 3500;
+dirLight3.shadow.bias = -0.0001;
+
+const manager = new THREE.LoadingManager();
+manager.onStart = function ( url, itemsLoaded, itemsTotal ) {
+	console.log( 'Started loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
+};
+
+manager.onLoad = function ( ) {
+	console.log( 'Loading complete!');
+};
+
+manager.onProgress = function ( url, itemsLoaded, itemsTotal ) {
+	console.log( 'Loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
+};
+
+manager.onError = function ( url ) {
+	console.log( 'There was an error loading ' + url );
+};
+// Load model
+const loader = new GLTFLoader(manager);
+const dracoLoader = new DRACOLoader();
+dracoLoader.preload();
+dracoLoader.setDecoderPath( '' );
+//loader.setDRACOLoader( new THREE.DRACOLoader() );
+dracoLoader.setDecoderConfig( { type: 'js' } );
+loader.setDRACOLoader( dracoLoader );
+let model;
+loader.load(
+  "rose_glove_final_of_draco.gltf",
+  (gltf) => {
+    function updateColor(id, colorCode) {
+      scene.traverse((object) => {
+        if (object.isMesh) {
+          if (object.material.name === id) {
+            if (
+              object.material.name === "9p_logo_outline" &&
+              object.visible === false
+            ) {
+              if (typeof colorCode === "string" && colorCode === "none") {
+                object.visible = false;
+              }
+              object.visible = true;
+            }
+            object.material.color.set(Number(colorCode.toString()));
+            object.material.emissive.set(Number(colorCode.toString()));
+          }
+        }
+      });
+    }
+    const scale = 20;
+    model = gltf.scene;
+    model.scale.set(scale, scale, scale);
+    model.castShadow = true;
+    model.receiveShadow = true;
+
+    const modelBox = new THREE.Box3().setFromObject(model);
+    const modelCenter = modelBox.getCenter(new THREE.Vector3());
+    model.position.sub(modelCenter);
+
+    // // Make the model reflective
+    // const reflectiveMaterial = new THREE.MeshStandardMaterial({
+    //   color: 0xffffff,
+    //   metalness: 1, // Make it highly reflective
+    //   roughness: 0.1, // Adjust roughness as needed
+    // });
+
+    model.traverse((child) => {
+      if (child.isMesh) {
+        switch (child.material.name) {
+          case "n_logo_main":
+          case "n_logo_outline":
+          case "ny_logo_main":
+          case "ny_logo_outline":
+          case "9p_logo_outline":
+            child.visible = false;
+            break;
+          case "9p_logo_main":
+          case "9p_rise":
+          case "web_graphic":
+            child.material.color.set(Number(0xc6a82d));
+            break;
+          default:
+            child.material.color.set(Number(0x202020));
+            break;
+        }
+      }
+    });
+
+    scene.add(model);
+    updateScale();
+
+    // Set camera position and target
+    const modelBoundingSphere = new THREE.Sphere();
+    modelBox.getBoundingSphere(modelBoundingSphere);
+    const modelCenterVector = modelBoundingSphere.center;
+    const modelSize = modelBoundingSphere.radius;
+
+    //camera.position.set(modelCenterVector.x, modelCenterVector.y, modelCenterVector.z + modelSize);
+    camera.position.set(0, 0, 0.8 + modelSize);
+    camera.lookAt(modelCenterVector);
+
+    // Enable orbit controls
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableZoom = true;
+    controls.autoRotate = false; // Disable auto-rotation
+    controls.minDistance = 5; // Adjust this value as needed
+    controls.maxDistance = 7; // Adjust this value as needed
+    controls.update();
+
+    document.addEventListener("click", (e) => {
+      if (e.target.classList.contains("cgkit-swatch")) {
+        let label =
+          e.target.parentElement.parentElement.parentElement.parentNode
+            .previousElementSibling.textContent;
+        label = label.split(":")[0].toLowerCase();
+        const value = e.target.getAttribute("data-attribute-value");
+        switch (label) {
+          case "Back Finger Color":
+            updateColor("back_finger", colors[value]);
+            break;
+          case "Thumb Finger Color":
+            updateColor("thumb_finger", colors[value]);
+            break;
+          case "Thumb Inner Color":
+            updateColor("thumb_inner", colors[value]);
+            break;
+          case "Thumb Outer Color":
+            updateColor("index_outer", colors[value]);
+            break;
+          case "Index Inner Color":
+            updateColor("index_inner", colors[value]);
+            break;
+          case "Ring Inner Color":
+            updateColor("ring_inner", colors[value]);
+            break;
+          case "Pinky Inner Color":
+            updateColor("pinky_inner", colors[value]);
+            break;
+          case "Index Inner Color":
+            updateColor("index_inner", colors[value]);
+            break;
+          case "Index Outer Color":
+            updateColor("index_outer", colors[value]);
+            break;
+          case "Middle Inner Color":
+            updateColor("middle_inner", colors[value]);
+            break;
+          case "Middle Outer Color":
+            updateColor("middle_outer", colors[value]);
+            break;
+          case "Ring Outer Color":
+            updateColor("ring_outer", colors[value]);
+            break;
+          case "Pinky Outer Color":
+            updateColor("pinky_outer", colors[value]);
+            break;
+          case "Wrist Color":
+            updateColor("wrist", colors[value]);
+            break;
+          case "Palm Color":
+            updateColor("palm", colors[value]);
+            break;
+          case "Web Color":
+            updateColor("web", colors[value]);
+            break;
+          case "Web Color":
+            updateColor("web_graphic", colors[value]);
+            break;
+          case "Lining Color":
+            updateColor("lining", colors[value]);
+            break;
+          case "Web Base Color":
+            updateColor("web_utoe", colors[value]);
+            break;
+          case "Target Color":
+            updateColor("target", colors[value]);
+            break;
+          case "Binding Color":
+            ["binding", "binding2"].forEach((material) => {
+              updateColor(material, colors[value]);
+            });
+            break;
+          case "Welt Color":
+            ["welt", "welt2"].forEach((material) => {
+              updateColor(material, colors[value]);
+            });
+            break;
+          case "Lace Color":
+            ["laces", "web laces"].forEach((material) => {
+              updateColor(material, colors[value]);
+            });
+            break;
+          case "Stitching Color":
+            const materials = ["stitches", "web_stitches"];
+            materials.forEach((material) => {
+              updateColor(material, colors[value]);
+            });
+            break;
+          case "Embroidery Color":
+            updateColor("embroidery", colors[value]);
+            break;
+          case "Finger Protector Color":
+            updateColor("finger_protector", colors[value]);
+            break;
+          case "Lining Color":
+            updateColor("lining", colors[value]);
+            break;
+          case "Glove Logo Color":
+            updateColor("glove_logo", colors[value]);
+            break;
+          default:
+            break;
+        }
+      }
+    });
+  },
+  (xhr) => {
+    console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
+  }
+);
+
+// Animation
+const animate = () => {
+  requestAnimationFrame(animate);
+
+  if (model) {
+    model.rotation.y += 0.005;
+  }
+
+  renderer.render(scene, camera);
+};
+
+animate();
+
+// Handle window resize
+window.addEventListener("resize", () => {
+  const newWidth = container.clientWidth;
+  const newHeight = container.clientHeight;
+  camera.aspect = newWidth / newHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(newWidth, newHeight);
+});
+
+// Handle model scaling
+function updateScale() {
+  const newWidth = container.clientWidth;
+  const newHeight = container.clientHeight;
+
+  camera.aspect = newWidth / newHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(newWidth, newHeight);
+}
