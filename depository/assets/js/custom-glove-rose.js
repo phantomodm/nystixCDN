@@ -172,7 +172,7 @@ manager.onError = function ( url ) {
 const loader = new GLTFLoader(manager);
 const dracoLoader = new DRACOLoader();
 dracoLoader.preload();
-dracoLoader.setDecoderPath( '' );
+dracoLoader.setDecoderPath( 'wp-content/themes/shoptimizer-child-theme/assets/js/decoder/' );
 //loader.setDRACOLoader( new THREE.DRACOLoader() );
 dracoLoader.setDecoderConfig( { type: 'js' } );
 loader.setDRACOLoader( dracoLoader );
