@@ -3,6 +3,7 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
+console.log(customModel);
 const colors = {
   "apple-green": 0x93c422,
   beige: 0xffe87a,
@@ -172,13 +173,13 @@ manager.onError = function ( url ) {
 const loader = new GLTFLoader(manager);
 const dracoLoader = new DRACOLoader();
 dracoLoader.preload();
-dracoLoader.setDecoderPath( 'wp-content/themes/shoptimizer-child-theme/assets/js/decoder/' );
+dracoLoader.setDecoderPath( 'https://cdn.jsdelivr.net/gh/phantomodm/nystixCDN@9P/depository/assets/js/decoder/' );
 //loader.setDRACOLoader( new THREE.DRACOLoader() );
 dracoLoader.setDecoderConfig( { type: 'js' } );
 loader.setDRACOLoader( dracoLoader );
 let model;
 loader.load(
-  "rose_glove_final_of_draco.gltf",
+  "https://cdn.jsdelivr.net/gh/phantomodm/nystixCDN@9P/depository/assets/js/rose_glove_final_inf_draco.gltf",
   (gltf) => {
     function updateColor(id, colorCode) {
       scene.traverse((object) => {
