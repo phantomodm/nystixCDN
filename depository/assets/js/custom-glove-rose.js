@@ -3,7 +3,6 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
-console.log(customModel);
 const colors = {
   "apple-green": 0x93c422,
   beige: 0xffe87a,
@@ -75,7 +74,7 @@ ground.position.y = -0.25; // Just slightly below the origin to avoid z-fighting
 ground.receiveShadow = true;
 
 // Add the ground to the scene
-scene.add(ground);
+//scene.add(ground);
 
 // Add lighting
 const hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 2);
