@@ -178,7 +178,7 @@ dracoLoader.setDecoderConfig( { type: 'js' } );
 loader.setDRACOLoader( dracoLoader );
 let model;
 loader.load(
-  "https://cdn.jsdelivr.net/gh/phantomodm/nystixCDN@9P/depository/assets/js/rose_glove_final_inf_draco.gltf",
+  customModel.fileName,
   (gltf) => {
     function updateColor(id, colorCode) {
       scene.traverse((object) => {
@@ -264,15 +264,10 @@ loader.load(
         let label =
           e.target.parentElement.parentElement.parentElement.parentNode
             .previousElementSibling.textContent;
-        label = label.split(":")[0].toLowerCase();
+        label = label = label.split(":")[0].trim();
         const value = e.target.getAttribute("data-attribute-value");
         switch (label) {
-          case "Back Finger Color":
-            updateColor("back_finger", colors[value]);
-            break;
-          case "Thumb Finger Color":
-            updateColor("thumb_finger", colors[value]);
-            break;
+
           case "Thumb Inner Color":
             updateColor("thumb_inner", colors[value]);
             break;
