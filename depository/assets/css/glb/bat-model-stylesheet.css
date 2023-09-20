@@ -46,6 +46,15 @@
   }
 }
 
+#myThreeJSScene {
+    background: var(--colors-background-main);
+    background: var(--colors-background-gradient);
+    display: flex;
+    width: 604px;
+    height: 640px;
+    padding: 0px 50px 0px 50px;
+}
+
 .downloadtocanvas {
   position: absolute;
   top: 20%;
