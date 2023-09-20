@@ -1,9 +1,9 @@
 :root {
   /* COLORS */
   /* --colors-background-primary: #474747; */
-  --colors-background-primary: rgb(4, 30, 66);
+  --colors-background-primary: #abb8c3;
 
-  --colors-background-secondary: #d6d6de;
+  --colors-background-secondary: #ededed;
   --colors-header: #5f6e78;
   --colors-background-main: rgb(4, 30, 66);
   --colors-background-gradient: radial-gradient(
@@ -18,7 +18,7 @@
     background: var(--colors-background-main);
     background: var(--colors-background-gradient);
     display: flex;
-    width: 604px;
+    width: 567px;
     height: auto;
     padding: 0px 50px 0px 50px;
 }
