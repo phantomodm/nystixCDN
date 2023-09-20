@@ -15,8 +15,8 @@
 }
 
 #myThreeJSScene {
-    background: var(--colors-background-main);
-    background: var(--colors-background-gradient);
+    /* background: var(--colors-background-main);
+    background: var(--colors-background-gradient); */
     display: flex;
     width: 567px;
     height: auto;
