@@ -1,0 +1,92 @@
+:root {
+  /* COLORS */
+  /* --colors-background-primary: #474747; */
+  --colors-background-primary: rgb(4, 30, 66);
+
+  --colors-background-secondary: #d6d6de;
+  --colors-header: #5f6e78;
+  --colors-background-main: rgb(4, 30, 66);
+  --colors-background-gradient: radial-gradient(
+    circle,
+    rgba(4, 30, 66, 1) 10%,
+    rgba(71, 71, 71, 1) 100%,
+    rgba(187, 0, 33, 1) 100%
+  );
+}
+
+#myThreeJSScene {
+    background: var(--colors-background-main);
+    background: var(--colors-background-gradient);
+    display: flex;
+    width: 604px;
+    height: auto;
+    padding: 0px 50px 0px 50px;
+}
+
+#loader,
+.loader {
+  border: 5px solid #f3f3f3; /* Light grey */
+  border-top: 5px solid #bb0021; /* 9P Red */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  z-index: 2;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.downloadtocanvas {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin-top: -100px;
+  margin-bottom: 20px;
+}
+.column {
+  height: 50px;
+}
+.left-column,
+.right-column {
+  flex: 0 0 50px; /* Fixed width for left and right columns */
+}
+.middle-column {
+  flex-grow: 1; /* Flexible width for the middle column */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Adjust the flex layout for different screen sizes */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: row;
+    text-align: center;
+  }
+}
+.main-canvas-container {
+  background: rgb(
+    246,
+    246,
+    246
+  ); /*background: radial-gradient( circle, rgba(214, 214, 222, 1) 10%, rgba(246, 246, 246, 1) 100%, rgba(2, 0, 36, 1) 100% ) */
+  display: flex;
+  height: 300px;
+  width: 100%;
+}
