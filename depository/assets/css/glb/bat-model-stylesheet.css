@@ -81,7 +81,12 @@
   align-items: center;
   justify-content: center;
 }
-
+.summary.variations {
+    font-size: 14px;
+}
+.cgkit-as-wrap .cgkit-attribute-swatches .cgkit-attribute-swatch.cgkit-button button {
+	font-size: 14px;
+}
 /* Adjust the flex layout for different screen sizes */
 @media (max-width: 768px) {
   .nav-container {
