@@ -1,7 +1,7 @@
 :root {
   /* COLORS */
   /* --colors-background-primary: #474747; */
-  --colors-background-primary: rgb(171, 184, 195);
+  --colors-background-primary: #abb8c3;
 
   --colors-background-secondary: #ededed;
   --colors-header: #5f6e78;
@@ -15,8 +15,7 @@
 }
 
 #myThreeJSScene {
-    /* background: var(--colors-background-main);
-    background: var(--colors-background-gradient); */
+    background: var(--colors-background-main);
     display: flex;
     width: 567px;
     height: auto;
@@ -44,15 +43,6 @@
   100% {
     transform: rotate(360deg);
   }
-}
-
-#myThreeJSScene {
-    background: var(--colors-background-main);
-    background: var(--colors-background-gradient);
-    display: flex;
-    width: 604px;
-    height: 640px; 
-    /*padding: 0px 50px 0px 50px;*/
 }
 
 .downloadtocanvas {
