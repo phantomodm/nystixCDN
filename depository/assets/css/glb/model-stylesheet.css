@@ -1,7 +1,7 @@
 :root {
     /* COLORS */
     /* --colors-background-primary: #474747; */
-    --colors-background-primary: rgb(4, 30, 66);
+    --colors-background-primary: #041e42;
 
     --colors-background-secondary: #d6d6de;
     --colors-header: #5f6e78;
@@ -36,7 +36,7 @@
 	font-size: 14px;
 }
 .downloadtocanvas { position: absolute; top: 20%; right: 5%;}
-.nav-container { display: flex; align-items: center; justify-content: space-between; padding: 20px; margin-top: -100px; margin-bottom: 20px;; } 
+.nav-container { display: flex; align-items: center; justify-content: space-between; padding: 20px; margin-bottom: 20px;; } 
 .column { height: 50px; } 
 .left-column, .right-column { flex: 0 0 50px; /* Fixed width for left and right columns */ } 
 .middle-column { flex-grow: 1; /* Flexible width for the middle column */ display: flex; align-items: center; justify-content: center; } 
