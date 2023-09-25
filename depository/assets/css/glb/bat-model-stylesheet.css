@@ -45,6 +45,8 @@
   }
 }
 
+.btn{ background: transparent;}
+
 .downloadtocanvas {
   position: absolute;
   top: 20%;
