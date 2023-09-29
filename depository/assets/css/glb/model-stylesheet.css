@@ -41,7 +41,7 @@
 .nav-container { display: flex; align-items: center; justify-content: space-between; padding: 20px; margin-bottom: 20px;; } 
 .column { height: 50px; } 
 .left-column, .right-column { flex: 0 0 50px; /* Fixed width for left and right columns */ } 
-.middle-column { flex-grow: 1; /* Flexible width for the middle column */ display: flex; align-items: center; justify-content: center; } 
+.middle-column { flex-grow: 1; /* Flexible width for the middle column */ display: flex; justify-content: center; } 
 .summary.entry-summary{ display: block !important; width: 100% !important; }
  /* Adjust the flex layout for different screen sizes */ 
  @media (max-width: 768px) { .nav-container { flex-direction: row; text-align: center; } } 

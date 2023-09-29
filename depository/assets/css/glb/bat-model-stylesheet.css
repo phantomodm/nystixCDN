@@ -70,7 +70,6 @@
 .middle-column {
   flex-grow: 1; /* Flexible width for the middle column */
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 .summary.variations {
