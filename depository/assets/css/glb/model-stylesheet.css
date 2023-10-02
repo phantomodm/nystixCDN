@@ -45,8 +45,9 @@
   top: -25px; /* Initial position above the tab */
   padding-left: 10px;
   transform: translateX(-50%);
-  animation: bounce 1s ease-in-out infinite;
+  animation: bounce 5s ease-in-out infinite;
 }
+
 @keyframes bounce {
 0%, 100% {
     transform: translateX(-50%) translateY(-25px); /* Start and end positions */
