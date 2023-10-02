@@ -37,11 +37,29 @@
 .cgkit-as-wrap .cgkit-attribute-swatches .cgkit-attribute-swatch.cgkit-button button {
 	font-size: 14px;
 }
+.bouncing-arrow{
+  width: 20px;
+  height: 20px;
+  background-color: #05ff1a; /* Arrow color */
+  position: absolute;
+  top: -25px; /* Initial position above the tab */
+  transform: translateX(-50%);
+  animation: bounce 1s ease-in-out infinite;
+}
+@keyframes bounce {
+0%, 100% {
+    transform: translateX(-50%) translateY(-25px); /* Start and end positions */
+  }
+  50% {
+    transform: translateX(-50%) translateY(-5px); /* Bounce height */
+  }
+}
 .downloadtocanvas { position: absolute; top: 20%; right: 5%;}
 .nav-container { display: flex; align-items: center; justify-content: space-between; padding: 20px; margin-bottom: 20px;; } 
 .column { height: 50px; } 
 .left-column, .right-column { flex: 0 0 50px; /* Fixed width for left and right columns */ } 
 .middle-column { flex-grow: 1; /* Flexible width for the middle column */ display: flex; justify-content: center; } 
+.single_variation_wrap { width: 100%;}
 .summary.entry-summary{ display: block !important; width: 100% !important; }
 /* Adjust the flex layout for different screen sizes */ 
 @media (min-width: 768px) { #shoptimizer-modals-wrapper {display: block;} }
