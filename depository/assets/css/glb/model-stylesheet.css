@@ -42,10 +42,10 @@
   height: 20px;
   /* background-color: #05ff1a;  Arrow color */
   position: absolute;
-  top: -25px; /* Initial position above the tab */
+  top: -1px; /* Initial position above the tab */
   padding-left: 10px;
   transform: translateX(-50%);
-  animation: bounce 5s ease-in-out infinite;
+  animation: bounce 5s ease-in-out 1;
 }
 
 @keyframes bounce {
