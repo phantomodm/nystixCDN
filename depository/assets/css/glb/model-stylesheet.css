@@ -40,7 +40,7 @@
 .bouncing-arrow{
   width: 20px;
   height: 20px;
-  //background-color: #05ff1a; /* Arrow color */
+  /* background-color: #05ff1a;  Arrow color */
   position: absolute;
   top: -25px; /* Initial position above the tab */
   padding-left: 10px;
