@@ -43,6 +43,7 @@
   background-color: #05ff1a; /* Arrow color */
   position: absolute;
   top: -25px; /* Initial position above the tab */
+  padding-left: 10px;
   transform: translateX(-50%);
   animation: bounce 1s ease-in-out infinite;
 }
@@ -54,6 +55,7 @@
     transform: translateX(-50%) translateY(-5px); /* Bounce height */
   }
 }
+
 .downloadtocanvas { position: absolute; top: 20%; right: 5%;}
 .nav-container { display: flex; align-items: center; justify-content: space-between; padding: 20px; margin-bottom: 20px;; } 
 .column { height: 50px; } 
