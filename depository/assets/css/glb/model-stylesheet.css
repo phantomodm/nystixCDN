@@ -43,6 +43,7 @@
 .left-column, .right-column { flex: 0 0 50px; /* Fixed width for left and right columns */ } 
 .middle-column { flex-grow: 1; /* Flexible width for the middle column */ display: flex; justify-content: center; } 
 .summary.entry-summary{ display: block !important; width: 100% !important; }
- /* Adjust the flex layout for different screen sizes */ 
+/* Adjust the flex layout for different screen sizes */ 
+@media (min-width: 768px) { #shoptimizer-modals-wrapper {display: block;} }
  @media (max-width: 768px) { .nav-container { flex-direction: row; text-align: center; } } 
  .main-canvas-container{ background: rgb(246, 246, 246); /*background: radial-gradient( circle, rgba(214, 214, 222, 1) 10%, rgba(246, 246, 246, 1) 100%, rgba(2, 0, 36, 1) 100% ) */ display: flex; height: 300px; width: 100%; }
