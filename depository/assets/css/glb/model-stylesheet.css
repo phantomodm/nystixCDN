@@ -42,7 +42,7 @@
   height: 20px;
   /* background-color: #05ff1a;  Arrow color */
   position: absolute;
-  top: -1px; /* Initial position above the tab */
+  top: -20px; /* Initial position above the tab */
   padding-left: 10px;
   transform: translateX(-50%);
   animation: bounce 5s ease-in-out 1;
@@ -57,6 +57,14 @@
   }
 }
 
+#myThreeJSScene {
+  background: #041e42;
+  /* background: #ffffff; */
+  display: flex;
+  width: 60%;
+  height: 400px;
+  padding: 0px 50px 0px 50px;
+}
 .downloadtocanvas { position: absolute; top: 20%; right: 5%;}
 .nav-container { display: flex; align-items: center; justify-content: space-between; padding: 20px; margin-bottom: 20px;; } 
 .column { height: 50px; } 
@@ -66,5 +74,5 @@
 .summary.entry-summary{ display: block !important; width: 100% !important; }
 /* Adjust the flex layout for different screen sizes */ 
 @media (min-width: 768px) { #shoptimizer-modals-wrapper {display: block;} }
- @media (max-width: 768px) { .nav-container { flex-direction: row; text-align: center; } } 
- .main-canvas-container{ background: rgb(246, 246, 246); /*background: radial-gradient( circle, rgba(214, 214, 222, 1) 10%, rgba(246, 246, 246, 1) 100%, rgba(2, 0, 36, 1) 100% ) */ display: flex; height: 300px; width: 100%; }
+@media (max-width: 768px) { .nav-container { flex-direction: row; text-align: center; } } 
+.main-canvas-container{ background: rgb(246, 246, 246); /*background: radial-gradient( circle, rgba(214, 214, 222, 1) 10%, rgba(246, 246, 246, 1) 100%, rgba(2, 0, 36, 1) 100% ) */ display: flex; height: 300px; width: 100%; }
