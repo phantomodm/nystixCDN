@@ -80,9 +80,9 @@
 }
 .rotation-controls {
   position: absolute;
-  top: 30%;
+  top: 70%;
   right: 5%;
-  width: 30px;
+  width: 60px;
   height: 30px;
 }
 .switch {
