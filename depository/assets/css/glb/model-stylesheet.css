@@ -74,9 +74,8 @@
   background: #041e42;
   /* background: #ffffff; */
   display: flex;
-  height: 400px;
-  padding: 0px 50px 0px 50px;
   position: relative;
+  height: 400px;
 }
 .rotation-controls {
   position: absolute;
