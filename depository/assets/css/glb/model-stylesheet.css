@@ -10,7 +10,7 @@
     circle,
     rgba(4, 30, 66, 1) 10%,
     rgba(71, 71, 71, 1) 100%,
-    rgba(187, 0, 33, 1) 100%
+    #bb0021 100%
   );
 }
 
@@ -79,8 +79,8 @@
 }
 .rotation-controls {
   position: absolute;
-  top: 70%;
-  right: 5%;
+  top: 5%;
+  left: 5%;
   width: 60px;
   height: 30px;
 }
@@ -197,17 +197,12 @@ input:checked + .slider:before {
   }
 }
 @media (max-width: 768px) {
-  .rotation-controls {
-    width: 100%;
-    left: 5%;
-    top: 80%;
-  }
   .rotation-controls_container {
     flex-direction: row;
     text-align: center;
     align-items: center;
-    ;
   }
+  
   .rotation-controls_label {
     margin-right: 10px;
     text-transform: uppercase;
